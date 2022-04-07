@@ -396,7 +396,19 @@
                   </li>
                </ul>
             </div>
-        </div>
+            <form class="signform" name="sign-form" autocomplete="on">
+                <label class="signtext" for="email">Подпишитесь на рассылку
+                </label>
+                <div class="sign-block-email"  >
+                    <input class="input-sign" type="email" name="email" id="email" placeholder="E-mail" />
+                    <button class="sign-btn" type="submit">Подписаться
+                        <svg class="svg-sign" width="24" height="24">
+                            <use href="./images/sprite.svg#icon-iconsend"></use>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </div> 
     </footer>
     <div class="backdrop is-hidden" data-modal>
         <div class="modalwindow">
