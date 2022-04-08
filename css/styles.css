@@ -731,10 +731,9 @@ input:focus.contact-modalwindow-input {
 input:checked + .icon-checkbox{
   background-color: var(--accent-color);
   border: solid 2px var(--accent-color);
-  background-image: url(../images/svg/icon-checkbox.svg);
+  background-image: url(../images/svg/full-check.svg);
   background-size: contain;
-  background-repeat: no-repeat;
-  background-origin: content-box;
+  background-origin: border-box;
 }
 
 /* Styles Porfolio */
