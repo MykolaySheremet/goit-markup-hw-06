@@ -574,6 +574,7 @@ address {
   background-color:transparent;
   padding: 0;
   cursor: pointer;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
 }
 .modal-close-icon{
@@ -583,6 +584,10 @@ address {
 .modal-close-btn:focus .modal-close-icon{
   fill: var(--accent-color);
 }
+/* button:focus.modal-close-btn,
+button:hover.modal-close-btn{
+  border: solid 1px var(--accent-color);
+} */
 
 .backdrop.is-hidden {
   opacity: 0;
@@ -619,11 +624,20 @@ address {
   height: 120px;
   padding: 11px 12px;
   margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
   resize: none;
   cursor: pointer;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+textarea:hover.textarea-modalwindow,
+textarea:focus.textarea-modalwindow{
+  outline: none;
+  border: solid 1px var(--accent-color);
 }
 .btn-modal-wind{
   min-width: 200px;
@@ -651,6 +665,7 @@ address {
 .input-svg-contact{
   position: relative;
 }
+
 .svg-form-modalwindow{
   position: absolute;
   left: 12px;
@@ -662,9 +677,10 @@ input:focus+.svg-form-modalwindow,
 input:hover+.svg-form-modalwindow{
   fill: var(--accent-color);
 }
-.contact-modalwindow-input:hover,
-.contact-modalwindow-input:focus{
-  border: 1px solid var(--accent-color);
+input:hover.contact-modalwindow-input,
+input:focus.contact-modalwindow-input {
+  outline: none;
+  border: solid 1px var(--accent-color);
 }
 .label-modal-contact{
   display:block;
@@ -675,7 +691,10 @@ input:hover+.svg-form-modalwindow{
   color: var(--second-color-text);
 }
 .agriment-text-label{
-  /* display: block; */
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-left: 12px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -683,11 +702,40 @@ input:hover+.svg-form-modalwindow{
 }
 .link-agriment{
   color: var(--accent-color);
+  margin-left: 4px;
+}
+.checbox-modalwindow{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.svg-checkbox{
+  fill: #188CE8;
+  background-color: red;
 }
 
-
-
-
+.icon-checkbox{
+  display: inline-block;
+  margin-right: 12px;
+  width: 15px;
+  height: 15px;
+  border: solid 2px var(--main-color-text);
+  border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+}
+input:checked + .icon-checkbox{
+  background-color: var(--accent-color);
+  border: solid 2px var(--accent-color);
+  background-image: url(../images/svg/icon-checkbox.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+}
 
 /* Styles Porfolio */
 /* styles list of bottons */
