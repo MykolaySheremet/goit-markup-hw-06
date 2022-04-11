@@ -439,7 +439,7 @@
 
                 <label class="label-modal-contact" for="mail-modal-window">Почта</label>
                 <div class="input-svg-contact">
-                    <input class="contact-modalwindow-input" type="mail" id="mail-modal-window" name="mail" />
+                    <input class="contact-modalwindow-input" type="email" id="mail-modal-window" name="mail" />
                     <svg class="svg-form-modalwindow" width="18" height="18">
                         <use href="./images/sprite.svg#icon-email-black"></use>
                     </svg>
@@ -448,18 +448,26 @@
                 <label class="label-modal-contact" for="com-area">Комментарий</label>
                 <textarea class="textarea-modalwindow" name="comentarea" id="com-area" placeholder="Введите текст"></textarea>
                
-                <label class="agriment-text-label">
-                    
+                <!-- <label class="agriment-text-label">
+
                     <input class="checbox-modalwindow" type="checkbox" name="licenagrement" value="agree" required />
                     <span class="icon-checkbox"></span>
-                    <!-- <svg class="svg-checkbox" width="16" height="15">
-                        <use href="./images/sprite.svg#icon-icon-checkbox"></use>
-                    </svg> -->
-                    Соглашаюсь с рассылкой и принимаю
-                    
-                    <a class="link-agriment" href="">Условия договора</a>
-                </label>
+                    <svg class="svg-checkbox" width="16" height="15">
+                                        <use href="./images/sprite.svg#icon-icon-checkbox"></use>
+                                    </svg>
+                    Соглашаюсь с рассылкой и принимаю &nbsp
                 
+                    <a class="link-agriment" href="">Условия договора</a>
+                </label> -->
+                <div class="section-checkbox-agriment">
+                    <input class="checbox-modalwindow visually-hidden" type="checkbox" name="licenagrement" id="agriment-check" value="agree" required />
+                    <label class="agriment-text-label" for="agriment-check">Соглашаюсь с рассылкой и принимаю &nbsp;
+                        <a class="link-agriment" href="">Условия договора</a> 
+                    </label>
+                    
+                </div>
+                
+
                 <div class="box-button-mod">
                     <button class="btn-modal-wind" type="submit">Отправить
                     </button>
@@ -473,3 +481,5 @@
 </body>
 
 </html>
+
+                
